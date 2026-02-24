@@ -1,0 +1,90 @@
+/* Background */
+.container {
+  position: relative;
+  min-height: 100vh;
+  background: url("./image2.png") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Dark Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* Glass Card */
+.card {
+  position: relative;
+  z-index: 1;
+  width: 95%;
+  max-width: 1200px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back Button */
+.backButton {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: transparent;
+  border: none;
+  color: gold;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.backButton:hover {
+  text-shadow: 0 0 8px gold;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: gold;
+  text-shadow: 0 0 12px gold;
+}
+
+/* Map Wrapper */
+.mapWrapper {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+/* Map */
+.map {
+  height: 500px;
+  width: 100%;
+}
+
+/* Popup Styling */
+.popup {
+  font-size: 14px;
+  color: #222;
+}

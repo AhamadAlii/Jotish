@@ -1,0 +1,121 @@
+/* Full Page Static Background */
+.container {
+  position: relative;
+  height: 100vh; /* whole screen fixed */
+  background: url("./image2.png") center/cover no-repeat fixed;
+  overflow: hidden; /* prevent full page scroll */
+  color: white;
+}
+
+/* Dark Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* Content Wrapper */
+.content {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.title {
+  font-size: 36px;
+  color: gold;
+  text-shadow: 0 0 15px gold;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttonGroup {
+  margin-bottom: 25px;
+}
+
+.navButton {
+  padding: 10px 25px;
+  margin: 0 10px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(to right, gold, orange);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px gold;
+}
+
+/* Scrollable Table Section (ONLY THIS SCROLLS) */
+.tableSection {
+  width: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+  border-radius: 15px;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+/* Sticky Header */
+.table thead th {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 215, 0, 0.95);
+  padding: 16px;
+  text-align: left;
+  z-index: 10;
+}
+
+/* Table Cells */
+.table td {
+  padding: 14px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Row Hover */
+.table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* View Button */
+.viewButton {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(to right, gold, orange);
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.viewButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px gold;
+}
+
+/* Loading Screen */
+.loading {
+  height: 100vh;
+  background: url("./image2.png") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: gold;
+}

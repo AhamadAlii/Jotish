@@ -1,0 +1,111 @@
+/* Background */
+.container {
+  position: relative;
+  min-height: 100vh;
+  background: url("./image2.png") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Dark Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* Glass Card */
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back Button */
+.backButton {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: transparent;
+  border: none;
+  color: gold;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.backButton:hover {
+  text-shadow: 0 0 8px gold;
+}
+
+/* Title */
+.title {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: gold;
+  text-shadow: 0 0 12px gold;
+}
+
+/* Webcam */
+.webcam {
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid gold;
+  margin-bottom: 20px;
+}
+
+/* Captured Preview */
+.preview {
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid gold;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(to right, gold, orange);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px gold;
+}
+
+/* Button Group */
+.buttonGroup {
+  display: flex;
+  gap: 15px;
+}
