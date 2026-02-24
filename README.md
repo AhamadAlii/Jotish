@@ -1,16 +1,71 @@
-# React + Vite
+# Jotish.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multi-page ReactJS application built using Vite.  
+This project demonstrates authentication, REST API integration, routing, data visualization, map rendering, and camera capture functionality.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 🔐 Login Page
+- Client-side authentication
+- Valid credentials:
+  - **Username:** testuser
+  - **Password:** Test123
+- Redirects to List page after successful login
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📋 List Page
+- Fetches employee data from REST API
+- Displays structured list of records
+- Each item navigates to Details page
 
-## Expanding the ESLint configuration
+### 📄 Details Page
+- Displays detailed information of selected employee
+- Includes camera capture functionality
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📊 Bar Chart Page
+- Visualizes salary data of first 10 employees
+
+### 🗺 Map Page
+- Displays employee cities on a map
+
+---
+
+## 🌐 API Details
+
+**Endpoint:**
+https://backend.jotish.in/backend_dev/gettabledata.php
+
+**Method:** POST  
+**Content-Type:** application/json  
+
+---
+
+## 🛠 Tech Stack
+
+- ReactJS (Vite)
+- React Router
+- CSS Modules
+- Fetch API
+- Chart Library
+- Browser Camera API
+
+---
+## ⚙️ Installation & Setup
+
+### Clone the repository
+
+```bash
+git clone https://github.com/AhamadAlii/Jotish.git
+cd Jotish
+```
+
+### Install dependencies
+```bash
+npm install 
+```
+
+### Run development server
+```bash
+npm run dev
+```
